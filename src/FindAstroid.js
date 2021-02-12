@@ -98,10 +98,10 @@ const FindAstroid = (props) => {
   return (
     <Container>
       <Content>
-        <Form style={{margin: 10}}>
-          <Label style={{margin: 10}}>Enter Astroid ID *</Label>
+        <Form style={{margin: 5}}>
+          <Label style={{margin: 5}}>Enter Astroid ID *</Label>
           <Input
-            style={{padding: 10, borderRadius: 5, borderWidth: 1, margin: 6}}
+            style={{padding: 10, borderRadius: 5, borderWidth: 1,margin:2,marginTop:10}}
             placeholder="Enter Astroid ID"
             placeholderTextColor="#cecece"
             keyboardType="number-pad"
@@ -110,21 +110,21 @@ const FindAstroid = (props) => {
             onChangeText={(text) => setAstroidValue(text)}
           />
           <Container
-            style={{flexDirection: 'row', justifyContent: 'space-between', marginTop:35,marginHorizontal:5}}>
+            style={{flexDirection: 'row',justifyContent:'space-between', marginTop:35}}>
             <Button
               rounded
-              style={{flex: 0.45}}
+              style={{flex:0.45,flexDirection:'row'}}
               disabled={!astroidValue || loading}
               onPress={_submitButtonClicked}>
-              <Text style={{flex: 1, textAlign: 'center'}}>Submit</Text>
+              <Text style={{alignContent: 'stretch',flex:1,width:'100%'}}>Submit</Text>
             </Button>
             <Button
               rounded
               success
-              style={{flex: 0.45}}
+              style={{flex:0.45,flexDirection:'row'}}
               disabled={loading}
               onPress={_randonAstroidButtonClicked}>
-              <Text style={{flex: 1, textAlign: 'center'}}>Random Astroid</Text>
+              <Text style={{alignSelf: 'center',flex:1,width:'100%'}}>Random Astroid</Text>
             </Button>
           </Container>
         </Form>
